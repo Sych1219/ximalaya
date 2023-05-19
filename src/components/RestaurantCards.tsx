@@ -2,7 +2,7 @@ import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {MapPinIcon, StarIcon} from 'react-native-heroicons/outline';
 import React from 'react';
 
-interface RestaurantCardsProps {
+export interface RestaurantCardsProps {
   id: number;
   imageUrl: string;
   title: string;

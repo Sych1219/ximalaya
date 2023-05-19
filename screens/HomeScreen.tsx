@@ -15,13 +15,7 @@ import {
 } from 'react-native-heroicons/outline';
 import {MagnifyingGlassIcon} from 'react-native-heroicons/mini';
 import Categories from '@components/Categories';
-import FeatureRow from '@components/FeatureRow';
-
-interface FeatureRowProps {
-  id: string;
-  title: string;
-  description: string;
-}
+import FeatureRow, {FeatureRowProps} from '@components/FeatureRow';
 
 export default function HomeScreen() {
   const navigation = useNavigation();

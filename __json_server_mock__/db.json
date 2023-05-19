@@ -1,18 +1,71 @@
-
 {
   "featureRows": [
     {
       "id": "1",
       "title": "Featured",
       "description": "Paid placements from our partners"
-    },{
+    },
+    {
       "id": "2",
-        "title": "Tasty Discounts",
-        "description": "Everyone's been enjoying these juciy discounts"
-    },{
+      "title": "Tasty Discounts",
+      "description": "Everyone's been enjoying these juciy discounts"
+    },
+    {
       "id": "3",
-        "title": "Offers Near You",
-        "description": "Why not try something new today?"
+      "title": "Offers Near You",
+      "description": "Why not try something new today?"
+    }
+  ],
+  "restaurantCards": [
+    {
+      "id": 1,
+      "imageUrl": "https://thumbs.dreamstime.com/z/susi-29401740.jpg",
+      "title": "Yo! Sushi",
+      "rateing": 4.5,
+      "genre": "Japanese",
+      "address": "123 Fake Street",
+      "short_description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options",
+      "dishes": [],
+      "long": 123,
+      "lat": 123
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "title": "Yo! Sushi",
+      "rateing": 4.5,
+      "genre": "Western",
+      "address": "Lonrong Street",
+      "short_description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options",
+      "dishes": [],
+      "long": 22,
+      "lat": 22
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://quintessentially.com/assets/noted/Hero_Image_SushiSamba.webp",
+      "title": "Yo! Sushi",
+      "rateing": 4.5,
+      "genre": "Western",
+      "address": "Dongguan Street",
+      "short_description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options",
+      "dishes": [],
+      "long": 22,
+      "lat": 22
+    }
+  ],
+  "categoryCards": [
+    {
+      "title": "deliver1",
+      "imageUrl": "https://links.papareact.com/wru"
+    },
+    {
+      "title": "fast",
+      "imageUrl": "https://links.papareact.com/wru"
+    },
+    {
+      "title": "slow",
+      "imageUrl": "https://links.papareact.com/wru"
     }
   ]
 }

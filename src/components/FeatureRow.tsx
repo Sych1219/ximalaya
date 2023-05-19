@@ -3,13 +3,31 @@ import {
   ArrowDownLeftIcon,
   ArrowRightIcon,
 } from 'react-native-heroicons/outline';
-import RestaurantCards from '@components/RestaurantCards';
+import RestaurantCards, {
+  RestaurantCardsProps,
+} from '@components/RestaurantCards';
+import {useEffect, useState} from 'react';
 export interface FeatureRowProps {
   id: string;
   title: string;
   description: string;
 }
 const FeatureRow = ({id, title, description}: FeatureRowProps) => {
+  const [restaurantCardsProps, setRestaurantCardsProps] = useState<
+    RestaurantCardsProps[]
+  >([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3000/restaurantCards')
+      .then(async response => {
+        const data = await response.json();
+        console.log('restaurant data', data);
+        setRestaurantCardsProps(data);
+      })
+      .catch(error => {
+        console.log('error restaurant data', error);
+      });
+  }, []);
   return (
     <View>
       <View className="mt-4 flex-row items-center justify-between px-4">
@@ -22,42 +40,21 @@ const FeatureRow = ({id, title, description}: FeatureRowProps) => {
         contentContainerStyle={{paddingHorizontal: 15}}
         showsHorizontalScrollIndicator={false}>
         {/*  ResturantCards*/}
-        <RestaurantCards
-          id={123}
-          imageUrl="https://thumbs.dreamstime.com/z/susi-29401740.jpg"
-          title="Yo! Sushi"
-          rateing={4.5}
-          genre="Japanese"
-          address="123 Fake Street"
-          short_description="Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options"
-          dishes={[]}
-          long={123}
-          lat={123}
-        />
-        <RestaurantCards
-          id={123}
-          imageUrl="https://thumbs.dreamstime.com/z/susi-29401740.jpg"
-          title="Yo! Sushi"
-          rateing={4.5}
-          genre="Japanese"
-          address="123 Fake Street"
-          short_description="Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options"
-          dishes={[]}
-          long={123}
-          lat={123}
-        />
-        <RestaurantCards
-          id={123}
-          imageUrl="https://thumbs.dreamstime.com/z/susi-29401740.jpg"
-          title="Yo! Sushi"
-          rateing={4.5}
-          genre="Japanese"
-          address="123 Fake Street"
-          short_description="Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options"
-          dishes={[]}
-          long={123}
-          lat={123}
-        />
+        {restaurantCardsProps?.map(restaurantCard => (
+          <RestaurantCards
+            key={restaurantCard.id}
+            id={restaurantCard.id}
+            imageUrl={restaurantCard.imageUrl}
+            title={restaurantCard.title}
+            rateing={restaurantCard.rateing}
+            genre={restaurantCard.genre}
+            address={restaurantCard.address}
+            short_description={restaurantCard.short_description}
+            dishes={restaurantCard.dishes}
+            long={restaurantCard.long}
+            lat={restaurantCard.lat}
+          />
+        ))}
       </ScrollView>
     </View>
   );

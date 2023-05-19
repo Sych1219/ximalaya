@@ -1,7 +1,7 @@
-import {Image, View, Text, TouchableOpacity} from 'react-native';
+import {Image, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-interface CategoryCardProps {
+export interface CategoryCardProps {
   title: string;
   imageUrl: string;
 }

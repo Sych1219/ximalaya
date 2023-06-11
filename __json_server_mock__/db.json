@@ -25,7 +25,19 @@
       "genre": "Japanese",
       "address": "123 Fake Street",
       "short_description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options",
-      "dishes": [],
+      "dishes": [{
+        "id": "1",
+        "name": "Sushi",
+        "image": "https://thumbs.dreamstime.com/z/susi-29401740.jpg",
+        "price": 10,
+        "description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options"
+      },{
+        "id": "2",
+        "name": "BBQ",
+        "image": "https://www.robertdyas.co.uk/media/magefan_blog/how_to_start_a_bbq.jpg",
+        "price": 10,
+        "description": "BBQ, chicken, Asian, Healthy, Vegetarian Friendly, Vegan Options"
+      }],
       "long": 123,
       "lat": 123
     },
@@ -37,7 +49,19 @@
       "genre": "Western",
       "address": "Lonrong Street",
       "short_description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options",
-      "dishes": [],
+      "dishes": [{
+        "id": "1",
+        "name": "Sushi",
+        "image": "https://thumbs.dreamstime.com/z/susi-29401740.jpg",
+        "price": 10,
+        "description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options"
+      },{
+        "id": "2",
+        "name": "BBQ",
+        "image": "https://www.robertdyas.co.uk/media/magefan_blog/how_to_start_a_bbq.jpg",
+        "price": 10,
+        "description": "BBQ, chicken, Asian, Healthy, Vegetarian Friendly, Vegan Options"
+      }],
       "long": 22,
       "lat": 22
     },
@@ -49,21 +73,36 @@
       "genre": "Western",
       "address": "Dongguan Street",
       "short_description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options",
-      "dishes": [],
+      "dishes": [{
+        "id": "1",
+        "name": "Sushi",
+        "image": "https://thumbs.dreamstime.com/z/susi-29401740.jpg",
+        "price": 10,
+        "description": "Sushi, Japanese, Asian, Healthy, Vegetarian Friendly, Vegan Options"
+      },{
+        "id": "2",
+        "name": "BBQ",
+        "image": "https://www.robertdyas.co.uk/media/magefan_blog/how_to_start_a_bbq.jpg",
+        "price": 10,
+        "description": "BBQ, chicken, Asian, Healthy, Vegetarian Friendly, Vegan Options"
+      }],
       "long": 22,
       "lat": 22
     }
   ],
   "categoryCards": [
     {
+      "id": "1",
       "title": "deliver1",
       "imageUrl": "https://links.papareact.com/wru"
     },
     {
+      "id": "2",
       "title": "fast",
       "imageUrl": "https://links.papareact.com/wru"
     },
     {
+        "id": "3",
       "title": "slow",
       "imageUrl": "https://links.papareact.com/wru"
     }

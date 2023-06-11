@@ -23,6 +23,8 @@ const Categories = () => {
       showsHorizontalScrollIndicator={false}>
       {categoryCards?.map(categoryCard => (
         <CategoryCard
+          key={categoryCard.id}
+          id={categoryCard.id}
           title={categoryCard.title}
           imageUrl={categoryCard.imageUrl}
         />

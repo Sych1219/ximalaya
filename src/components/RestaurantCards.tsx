@@ -1,6 +1,9 @@
 import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {MapPinIcon, StarIcon} from 'react-native-heroicons/outline';
 import React from 'react';
+import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {DishRowProps} from '@components/DishRow';
 
 export interface RestaurantCardsProps {
   id: number;
@@ -10,10 +13,15 @@ export interface RestaurantCardsProps {
   genre: string;
   address: string;
   short_description: string;
-  dishes: string[];
+  dishes: DishRowProps[];
   long: number;
   lat: number;
 }
+export type RootStackParamList = {
+  Home: undefined;
+  Restaurant: RestaurantCardsProps;
+};
+
 const RestaurantCards = ({
   id,
   imageUrl,
@@ -26,8 +34,27 @@ const RestaurantCards = ({
   long,
   lat,
 }: RestaurantCardsProps) => {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList, 'Home'>>();
+
+  // const navigation = useNavigation();
   return (
-    <TouchableOpacity className={'bg-white mr-3 shadow'}>
+    <TouchableOpacity
+      className={'bg-white mr-3 shadow'}
+      onPress={() => {
+        navigation.navigate('Restaurant', {
+          id,
+          imageUrl,
+          title,
+          rateing,
+          genre,
+          address,
+          short_description,
+          dishes,
+          long,
+          lat,
+        });
+      }}>
       <Image source={{uri: imageUrl}} className="h-36 w-64 rounded-sm" />
 
       <View className="px-3 pb-4">

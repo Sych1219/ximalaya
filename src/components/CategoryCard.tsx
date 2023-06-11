@@ -2,6 +2,7 @@ import {Image, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 
 export interface CategoryCardProps {
+  id: string;
   title: string;
   imageUrl: string;
 }

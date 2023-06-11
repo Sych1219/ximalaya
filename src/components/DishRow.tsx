@@ -6,7 +6,6 @@ import {useDispatch, useSelector} from 'react-redux';
 import {
   addToBasket,
   removeFromBasket,
-  selectBasket,
   selectBasketItemWithId,
 } from '../../features/basketSlice';
 import {RootState} from '../../store';

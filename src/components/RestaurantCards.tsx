@@ -20,6 +20,9 @@ export interface RestaurantCardsProps {
 export type RootStackParamList = {
   Home: undefined;
   Restaurant: RestaurantCardsProps;
+  Basket: undefined;
+  PreparingOrderScreen: undefined;
+  DeliveryScreen: undefined;
 };
 
 const RestaurantCards = ({

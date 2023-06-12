@@ -18,13 +18,17 @@ import {useEffect, useState} from 'react';
 import DishRow, {DishRowProps} from '@components/DishRow';
 import {XCircleIcon} from 'react-native-heroicons/outline';
 import Currency from 'react-currency-formatter';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '@components/RestaurantCards';
 
 interface GroupedItems {
   [key: string]: DishRowProps[];
 }
 
-const BasketScreen = () => {
-  const navigation = useNavigation();
+// const BasketScreen = () => {
+export default function BasketScreen() {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList, 'Home'>>();
   const resutrant = useSelector(selectRestaurant);
   const items = useSelector(selectBasket);
   const [groupedItems, setGroupedItems] = useState<GroupedItems>({});
@@ -117,15 +121,17 @@ const BasketScreen = () => {
             </Text>
           </View>
 
-          <TouchableOpacity className={'bg-[#00CCBB] py-2 rounded-md'}>
+          <TouchableOpacity
+            className={'bg-[#00CCBB] py-2 rounded-md'}
+            onPress={() => navigation.navigate('PreparingOrderScreen')}>
             <Text className={'text-center text-white font-bold text-lg'}>
-              place order
+              Place Order
             </Text>
           </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
   );
-};
+}
 
-export default BasketScreen;
+// export default BasketScreen;

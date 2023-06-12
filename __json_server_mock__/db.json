@@ -38,8 +38,8 @@
         "price": 10,
         "description": "BBQ, chicken, Asian, Healthy, Vegetarian Friendly, Vegan Options"
       }],
-      "long": 123,
-      "lat": 123
+      "long": 103.9018928,
+      "lat": 1.4063363
     },
     {
       "id": 2,
@@ -62,8 +62,8 @@
         "price": 10,
         "description": "BBQ, chicken, Asian, Healthy, Vegetarian Friendly, Vegan Options"
       }],
-      "long": 22,
-      "lat": 22
+      "long": 103.9018928,
+      "lat": 1.4063363
     },
     {
       "id": 3,
@@ -86,8 +86,8 @@
         "price": 10,
         "description": "BBQ, chicken, Asian, Healthy, Vegetarian Friendly, Vegan Options"
       }],
-      "long": 22,
-      "lat": 22
+      "long": 103.9018928,
+      "lat": 1.4063363
     }
   ],
   "categoryCards": [

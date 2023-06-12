@@ -3,10 +3,15 @@ import {selectBasket, selectBasketTotal} from '../../features/basketSlice';
 import {useSelector} from 'react-redux';
 import Currency from 'react-currency-formatter';
 import {useNavigation} from '@react-navigation/native';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import {RootStackParamList} from '@components/RestaurantCards';
 
 const BasketIcon = () => {
   const items = useSelector(selectBasket);
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
+  const navigation =
+    useNavigation<NativeStackNavigationProp<RootStackParamList, 'Home'>>();
+
   const basketTotal = useSelector(selectBasketTotal);
   if (!items.length) {
     return null;
@@ -14,7 +19,7 @@ const BasketIcon = () => {
   return (
     <View className={'absolute bottom-10 w-full z-50'}>
       <TouchableOpacity
-        onPress={() => navigation.navigate('Basket', {})}
+        onPress={() => navigation.navigate('Basket')}
         className={
           'mx-5 bg-[#00CCBB] p-4 rounded-lg flex-row items-center space-x-1'
         }>
